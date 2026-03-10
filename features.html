@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Vexer.png" type="image/png">
+    <title>مميزات الرتب - Vexer Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Vexer.png" alt="Vexer Logo" class="logo-img">
+            <span>VexerMc</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="store.html" data-ar="المتجر" data-en="Store">المتجر</a></li>
+            <li><a href="features.html" class="active" data-ar="مميزات الرتب" data-en="Rank Features">مميزات الرتب</a></li>
+            <li><a href="team.html" data-ar="المطورين" data-en="Developers">المطورين</a></li>
+        </ul>
+        <button class="lang-switch" onclick="toggleLanguage()">
+            <i class="fa-solid fa-globe"></i>
+            <span id="lang-text">EN</span>
+        </button>
+    </nav>
+
+    <main class="features-section">
+        <div class="features-header">
+            <h1><i class="fa-solid fa-star"></i> <span data-ar="مميزات الرتب" data-en="Rank Features">مميزات الرتب</span></h1>
+            <p data-ar="شاهد جميع مميزات كل رتبة في سيرفر Vexer" data-en="View all features of each rank on Vexer server">شاهد جميع مميزات كل رتبة في سيرفر Vexer</p>
+        </div>
+
+        <div class="features-table-container">
+            <table class="features-table">
+                <thead>
+                    <tr>
+                        <th><i class="fa-solid fa-crown"></i> <span data-ar="الرتبة" data-en="Rank">الرتبة</span></th>
+                        <th><i class="fa-solid fa-terminal"></i> <span data-ar="الأوامر" data-en="Commands">الأوامر</span></th>
+                        <th><i class="fa-solid fa-box"></i> <span data-ar="الكيتات" data-en="Kits">الكيتات</span></th>
+                        <th><i class="fa-solid fa-home"></i> <span data-ar=" Homes" data-en="Homes"> Homes</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="king">
+                        <td>
+                            <span class="rank-badge vexer-plus">King</span>
+                        </td>
+                        <td>
+                            <span class="command">~</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit-15d</span>
+                        </td>
+                        <td>
+                            <span class="homes">6</span>
+                        </td>
+                    </tr>
+                    <tr class="queen">
+                        <td>
+                            <span class="rank-badge vexer">Queen</span>
+                        </td>
+                        <td>
+                            <span class="command">~</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit-15d</span>
+                        </td>
+                        <td>
+                            <span class="homes">6</span>
+                        </td>
+                    </tr>
+                    <tr class="vip">
+                        <td>
+                            <span class="rank-badge vip">VIP</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit-15d</span>
+                        </td>
+                        <td>
+                            <span class="homes">5</span>
+                        </td>
+                    </tr>
+                    <tr class="vip-plus">
+                        <td>
+                            <span class="rank-badge vip-plus">VIP+</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit</span>
+                        </td>
+                        <td>
+                            <span class="homes">6</span>
+                        </td>
+                    </tr>
+                    <tr class="mvp">
+                        <td>
+                            <span class="rank-badge mvp">MVP</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit-7d</span>
+                        </td>
+                        <td>
+                            <span class="homes">6</span>
+                        </td>
+                    </tr>
+                    <tr class="elite">
+                        <td>
+                            <span class="rank-badge elite">Elite</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil /repair</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit-7</span>
+                        </td>
+                        <td>
+                            <span class="homes">6</span>
+                        </td>
+                    </tr>
+                    <tr class="mythic">
+                        <td>
+                            <span class="rank-badge mythic">Mythic</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil /repair</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Dia Kit +1 Orbs-7</span>
+                        </td>
+                        <td>
+                            <span class="homes">7</span>
+                        </td>
+                    </tr>
+                    <tr class="vexer">
+                        <td>
+                            <span class="rank-badge vexer">Vexer</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil /repair</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Neth Kit +2 Orbs-3d</span>
+                        </td>
+                        <td>
+                            <span class="homes">8</span>
+                        </td>
+                    </tr>
+                    <tr class="vexer-plus">
+                        <td>
+                            <span class="rank-badge vexer-plus">Vexer+</span>
+                        </td>
+                        <td>
+                            <span class="command">/craft /anvil /repair</span>
+                        </td>
+                        <td>
+                            <span class="kit">Max Neth Kit +3 Orbs-3d</span>
+                        </td>
+                        <td>
+                            <span class="homes">10</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Vexer Server. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

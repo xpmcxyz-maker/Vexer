@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Vexer.png" type="image/png">
+    <title>المتجر - Vexer Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Vexer.png" alt="Vexer Logo" class="logo-img">
+            <span>VexerMc</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="store.html" class="active" data-ar="المتجر" data-en="Store">المتجر</a></li>
+            <li><a href="features.html" data-ar="مميزات الرتب" data-en="Rank Features">مميزات الرتب</a></li>
+            <li><a href="team.html" data-ar="المطورين" data-en="Developers">المطورين</a></li>
+        </ul>
+        <button class="lang-switch" onclick="toggleLanguage()">
+            <i class="fa-solid fa-globe"></i>
+            <span id="lang-text">EN</span>
+        </button>
+    </nav>
+
+    <main class="store-section">
+        <div class="store-header">
+            <h1><i class="fa-solid fa-cart-shopping"></i> <span data-ar="متجر الرتب" data-en="Ranks Store">متجر الرتب</span></h1>
+            <p data-ar="اختر الرتبة التي تناسبك واستمتع بمميزات حصرية!" data-en="Choose your rank and enjoy exclusive benefits!">اختر الرتبة التي تناسبك واستمتع بمميزات حصرية!</p>
+            <div class="discord-notice">
+                <i class="fa-brands fa-discord"></i>
+                <span data-ar="سيتم نقلك إلى الديسكورد بعد الشراء، افتح تكت واكتب شراء رتبة" data-en="You will be redirected to Discord after purchase, open a ticket and write buy rank">سيتم نقلك إلى الديسكورد بعد الشراء، افتح تكت واكتب شراء رتبة</span>
+            </div>
+        </div>
+
+        <div class="ranks-grid">
+            <!-- King -->
+            <div class="rank-card" data-rank="king" data-price="2.5">
+                <div class="rank-badge king">King</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <h2 class="rank-name">King</h2>
+                <p class="rank-description" data-ar="رتبة ملكية مميزة" data-en="Distinguished royal rank">رتبة ملكية مميزة</p>
+                <div class="rank-price">
+                    <span class="price-amount">$2.5</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('King', 2.5)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- Queen -->
+            <div class="rank-card" data-rank="queen" data-price="2.5">
+                <div class="rank-badge queen">Queen</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <h2 class="rank-name">Queen</h2>
+                <p class="rank-description" data-ar="رتبة ملكية أنيقة" data-en="Elegant royal rank">رتبة ملكية أنيقة</p>
+                <div class="rank-price">
+                    <span class="price-amount">$2.5</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('Queen', 2.5)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- VIP -->
+            <div class="rank-card" data-rank="vip" data-price="4.99">
+                <div class="rank-badge vip">VIP</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h2 class="rank-name">VIP</h2>
+                <p class="rank-description" data-ar="الرتبه الأساسية مع مميزات حصرية" data-en="Basic rank with exclusive features">الرتبه الأساسية مع مميزات حصرية</p>
+                <div class="rank-price">
+                    <span class="price-amount">$4.99</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('VIP', 4.99)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- VIP+ -->
+            <div class="rank-card" data-rank="vip-plus" data-price="5.99">
+                <div class="rank-badge vip-plus">VIP+</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <h2 class="rank-name">VIP+</h2>
+                <p class="rank-description" data-ar="المزيد من المميزات الحصرية" data-en="More exclusive features">المزيد من المميزات الحصرية</p>
+                <div class="rank-price">
+                    <span class="price-amount">$5.99</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('VIP+', 5.99)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- Elite -->
+            <div class="rank-card" data-rank="elite" data-price="7.99">
+                <div class="rank-badge elite">Elite</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-gem"></i>
+                </div>
+                <h2 class="rank-name">Elite</h2>
+                <p class="rank-description" data-ar="نخبة اللاعبين المميزين" data-en="Elite of distinguished players">نخبة اللاعبين المميزين</p>
+                <div class="rank-price">
+                    <span class="price-amount">$7.99</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('Elite', 7.99)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- Mythic -->
+            <div class="rank-card" data-rank="mythic" data-price="9.99">
+                <div class="rank-badge mythic">Mythic</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-dragon"></i>
+                </div>
+                <h2 class="rank-name">Mythic</h2>
+                <p class="rank-description" data-ar="أقوى رتبه في السيرفر" data-en="The strongest rank on the server">أقوى رتبه في السيرفر</p>
+                <div class="rank-price">
+                    <span class="price-amount">$9.99</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('Mythic', 9.99)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- Vexer -->
+            <div class="rank-card" data-rank="vexer" data-price="14.99">
+                <div class="rank-badge vexer">Vexer</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h2 class="rank-name">Vexer</h2>
+                <p class="rank-description" data-ar="الرتبة الخاصة بالمؤسسين" data-en="Founders special rank">الرتبة الخاصة بالمؤسسين</p>
+                <div class="rank-price">
+                    <span class="price-amount">$14.99</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('Vexer', 14.99)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+
+            <!-- Vexer+ -->
+            <div class="rank-card" data-rank="vexer-plus" data-price="20">
+                <div class="rank-badge vexer-plus">Vexer+</div>
+                <div class="rank-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h2 class="rank-name">Vexer+</h2>
+                <p class="rank-description" data-ar="أعلى رتبه في السيرفر" data-en="Highest rank on the server">أعلى رتبه في السيرفر</p>
+                <div class="rank-price">
+                    <span class="price-amount">$20</span>
+                    <span class="price-period" data-ar="شهر" data-en="month">شهر</span>
+                </div>
+                <button class="btn btn-buy" onclick="selectRank('Vexer+', 20)">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="شراء الآن" data-en="Buy Now">شراء الآن</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Vexer Server. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Vexer.png" type="image/png">
+    <title>فريق العمل - Vexer Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Vexer.png" alt="Vexer Logo" class="logo-img">
+            <span>VexerMc</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="store.html" data-ar="المتجر" data-en="Store">المتجر</a></li>
+            <li><a href="features.html" data-ar="مميزات الرتب" data-en="Rank Features">مميزات الرتب</a></li>
+            <li><a href="team.html" class="active" data-ar="المطورين" data-en="Developers">المطورين</a></li>
+        </ul>
+        <button class="lang-switch" onclick="toggleLanguage()">
+            <i class="fa-solid fa-globe"></i>
+            <span id="lang-text">EN</span>
+        </button>
+    </nav>
+
+    <main class="team-section">
+        <div class="team-header">
+            <h1><i class="fa-solid fa-users"></i> <span data-ar="فريق العمل" data-en="Team">فريق العمل</span></h1>
+            <p data-ar="تعرف على فريق سيرفر Vexer المميز" data-en="Meet the Vexer server team">تعرف على فريق سيرفر Vexer المميز</p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Abdelkhaleq - مطور الموقع -->
+            <div class="team-card owner">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h2>Abdelkhaleq</h2>
+                <p class="team-role" data-ar="مطور الموقع" data-en="Web Developer">مطور الموقع</p>
+                <p class="team-desc" data-ar="مصمم ومطور الموقع الاحترافي" data-en="Professional website designer and developer">مصمم ومطور الموقع الاحترافي</p>
+                <div class="team-social">
+                </div>
+            </div>
+
+            <!-- Shadow - الأونر -->
+            <div class="team-card founder">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <h2>Shadow</h2>
+                <p class="team-role" data-ar="الأونر" data-en="Owner">الأونر</p>
+                <p class="team-desc" data-ar="مالك ومؤسس السيرفر" data-en="Server owner and founder">مالك ومؤسس السيرفر</p>
+                <div class="team-social">
+                </div>
+            </div>
+
+            <!-- Dark Shadow - مساعد الأونر -->
+            <div class="team-card co-owner">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <h2>Dark Shadow</h2>
+                <p class="team-role" data-ar="مساعد الأونر" data-en="Assistant Owner">مساعد الأونر</p>
+                <p class="team-desc" data-ar="مسؤول عن إدارة السيرفر" data-en="Responsible for server management">مسؤول عن إدارة السيرفر</p>
+                <div class="team-social">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="thanks-message">
+        <div class="thanks-box">
+            <i class="fa-solid fa-heart"></i>
+            <p data-ar="نشكركم على جهودكم في تطوير السيرفر والموقع، معكم المطور Abdelkhaleq" data-en="Thank you for your efforts in developing the server and website, with you developer Abdelkhaleq">نشكركم على جهودكم في تطوير السيرفر والموقع، معكم المطور Abdelkhaleq</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Vexer Server. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Vexer.png" type="image/png">
+    <title>Vexer Store </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Vexer.png" alt="Vexer Logo" class="logo-img">
+            <span>VexerMc</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="store.html" data-ar="المتجر" data-en="Store">المتجر</a></li>
+            <li><a href="features.html" data-ar="مميزات الرتب" data-en="Rank Features">مميزات الرتب</a></li>
+            <li><a href="team.html" data-ar="المطورين" data-en="Developers">المطورين</a></li>
+        </ul>
+        <button class="lang-switch" onclick="toggleLanguage()">
+            <i class="fa-solid fa-globe"></i>
+            <span id="lang-text">EN</span>
+        </button>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="server-status">
+                <span class="status-dot online"></span>
+                <span data-ar="السيرفر online الآن" data-en="Server is online now">السيرفر online الآن</span>
+            </div>
+            
+            <h1 class="server-name">VEXER</h1>
+            <p class="server-tagline" data-ar="سيرفر ماين كرافت العربي الأول" data-en="The First Arabic Minecraft Server">سيرفر ماين كرافت العربي الأول</p>
+            
+            <div class="server-ip">
+                <i class="fa-solid fa-copy"></i>
+                <span>vexermc.swight.cloud</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="store.html" class="btn btn-primary">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <span data-ar="الدخول للمتجر" data-en="Go to Store">الدخول للمتجر</span>
+                </a>
+                <a href="https://discord.gg/yVMtcEWc" target="_blank" class="btn btn-secondary">
+                    <i class="fa-brands fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+            </div>
+
+            <div class="server-stats">
+                <div class="stat-box">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="stat-number">250+</span>
+                    <span class="stat-label" data-ar="لاعب متصل" data-en="Players Online">لاعب متصل</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span class="stat-number">#1</span>
+                    <span data-ar="ترتيب" data-en="Rank">ترتيب</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fa-solid fa-globe"></i>
+                    <span data-ar="السعودية" data-en="Saudi Arabia">السعودية</span>
+                    <span data-ar="الموقع" data-en="Location">الموقع</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="minecraft-block">
+                <div class="block-face front"></div>
+                <div class="block-face back"></div>
+                <div class="block-face left"></div>
+                <div class="block-face right"></div>
+                <div class="block-face top"></div>
+                <div class="block-face bottom"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Vexer Server. <span data-ar="جميع الحقوق محفوظة" data-en="All rights reserved">جميع الحقوق محفوظة</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
