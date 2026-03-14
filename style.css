@@ -566,7 +566,7 @@ body::before {
 }
 
 .features-table .homes {
-    color: #2ed573;
+    color: #3498db;
     font-weight: 900;
     font-size: 1.2rem;
 }
@@ -1096,6 +1096,12 @@ body::before {
     box-shadow: 0 0 25px rgba(255, 165, 2, 0.6);
 }
 
+.rank-badge.custom {
+    background: linear-gradient(135deg, #a55eea 50%, #8854d0 50%);
+    color: #fff;
+    box-shadow: 0 0 25px rgba(165, 94, 234, 0.6);
+}
+
 .rank-icon {
     text-align: center;
     font-size: 3.5rem;
@@ -1513,10 +1519,52 @@ body::before {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
     .navbar {
-        padding: 12px 20px;
+        padding: 12px 15px;
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        margin: 2px;
+    }
+    
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .features-table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+    
+    .features-table {
+        min-width: 600px;
+        font-size: 0.85rem;
+    }
+    
+    .features-table th,
+    .features-table td {
+        padding: 12px 8px;
     }
 
     .logo {
@@ -1582,7 +1630,18 @@ body::before {
     }
 
     .rank-card {
-        padding: 28px 22px;
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+    
+    .rank-card .btn {
+        padding: 14px 20px;
+        min-height: 50px;
+    }
+    
+    .rank-badge {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 
     .price-amount {
@@ -1606,30 +1665,82 @@ body::before {
     }
 
     .modal-content {
-        padding: 40px 25px;
-        margin: 20px;
+        padding: 30px 20px;
+        margin: 15px;
+        width: calc(100% - 30px);
+        max-width: none;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .payment-options {
+        gap: 10px;
+    }
+    
+    .payment-option {
+        padding: 15px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .team-card {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .logo i {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+    }
+
+    .nav-links a {
+        padding: 6px 10px;
+        font-size: 0.8rem;
     }
 
     .server-name {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .server-tagline {
+        font-size: 0.95rem;
+        padding: 0 10px;
     }
 
     .store-header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .store-header p {
+        font-size: 0.9rem;
+        padding: 0 10px;
     }
 
     .rank-name {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .rank-description {
+        font-size: 0.85rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+
+    .features-table {
+        min-width: 500px;
+        font-size: 0.75rem;
     }
 }
 

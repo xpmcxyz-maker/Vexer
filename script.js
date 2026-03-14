@@ -31,6 +31,72 @@ function applyLanguage() {
 // Apply language on page load
 document.addEventListener('DOMContentLoaded', applyLanguage);
 
+// ===================================
+// Minecraft Server Status Fetcher
+// ===================================
+
+const SERVER_IP = 'vexermc.swight.cloud';
+const UPDATE_INTERVAL = 30; // Update every 30 seconds
+
+async function fetchServerStatus() {
+    try {
+        const response = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}`);
+        const data = await response.json();
+        
+        const playerCountElement = document.getElementById('player-count');
+        const statusDot = document.querySelector('.status-dot');
+        
+        if (data.online) {
+            // Server is online
+            const players = data.players?.online || 0;
+            const maxPlayers = data.players?.max || 0;
+            
+            playerCountElement.textContent = `${players} / ${maxPlayers}`;
+            
+            // Update status dot
+            if (statusDot) {
+                statusDot.classList.add('online');
+                statusDot.classList.remove('offline');
+            }
+            
+            // Update status text
+            const statusText = document.querySelector('.server-status span:last-child');
+            if (statusText) {
+                statusText.textContent = currentLang === 'ar' ? 
+                    'السيرفر online الآن' : 
+                    'Server is online now';
+            }
+        } else {
+            // Server is offline
+            playerCountElement.textContent = '0 / 0';
+            
+            if (statusDot) {
+                statusDot.classList.add('offline');
+                statusDot.classList.remove('online');
+            }
+            
+            const statusText = document.querySelector('.server-status span:last-child');
+            if (statusText) {
+                statusText.textContent = currentLang === 'ar' ? 
+                    'السيرفر offline الآن' : 
+                    'Server is offline now';
+            }
+        }
+    } catch (error) {
+        console.error('Failed to fetch server status:', error);
+        const playerCountElement = document.getElementById('player-count');
+        if (playerCountElement) {
+            playerCountElement.textContent = '---';
+        }
+    }
+}
+
+// Initialize server status on page load
+document.addEventListener('DOMContentLoaded', function() {
+    fetchServerStatus();
+    setInterval(fetchServerStatus, UPDATE_INTERVAL * 1000);
+});
+
 // Disable right-click context menu
 document.addEventListener('contextmenu', function(e) {
     e.preventDefault();
